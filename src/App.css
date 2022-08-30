@@ -1,0 +1,67 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 64px;
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.header {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.bio {
+  text-align: center;
+  color: gray;
+  margin-top: 16px;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.waveButton {
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 8px;
+  border: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+@keyframes tick { to { transform: rotate(359deg)}}
+
+.loader {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 2px solid steelblue;
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  left: 0.75em;
+  bottom: 0.75em;
+  display: block;
+  transform-origin: 0% 100%;
+  width: 1px;
+  height: 0.75em;
+  background: steelblue;
+  animation: tick 1s infinite linear;
+}
